@@ -34,8 +34,18 @@ class TestUser(unittest.TestCase):
         another_user = User("John", "Doe", "JohnDoe", "1111")
         another_user.save_User()
         #Lets perform the delete function and assert to see if the list length will reduce
-        self.new_user.delete_User()
+        self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
+    
+    #we can find a user using his her password this will help us search for user account
+    def test_search_user(self):
+        self.new_user.save_User()
+        anothernew_user = User("mary", "Doe", "JohnDoe", "2222")
+        anothernew_user.save_User()
+        
+        after_search = User.search_by_password("2222")
+        self.assertEqual(anothernew_user.firstname, anothernew_user.firstname)
+        
         
 if __name__ == '__main__':
     unittest.main()
