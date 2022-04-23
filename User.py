@@ -25,8 +25,21 @@ class User:
         removing user form the list
         """
         User.user_list.remove(self)
-        
-        
+    #searching user by passcode
+    @classmethod
+    def find_by_passcode(cls, passcode): #cls takes the whole class
+        for User in cls.user_list:
+            if User.passcode == passcode:
+                return User
+            
+    #check to see if the user really exists
+    @classmethod
+    def user_exist(cls,passcode):
+        for User in cls.user_list:
+            if User.passcode == passcode:
+                return True
+        return False
+           
     #display users
     @classmethod
     def display_users(userlist):
