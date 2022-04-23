@@ -8,7 +8,7 @@ class TestUser(unittest.TestCase):
     """
     #run a test to see if an object is instantiated correctly
     def setUp(self):
-        self.new_user = ("Reuby","Doe","DoeReuby","0000")
+        self.new_user = User("Reuby","Doe","DoeReuby","0000")
     def test_init(self):
         self.assertEqual(self.new_user.firstname,"Reuby")
         self.assertEqual(self.new_user.lastname,"Doe")
