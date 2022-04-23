@@ -11,4 +11,11 @@ class User:
         self.lastname = lastname
         self.username = username
         self.password = passcode
+    def save_User(self):
+
+        '''
+        save_User append the new user to our list
+        '''
+
+        User.user_list.append(self)
         
