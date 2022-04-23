@@ -38,13 +38,22 @@ class TestUser(unittest.TestCase):
         self.assertEqual(len(User.user_list),1)
     
     #we can find a user using his her password this will help us search for user account
-    def test_search_user(self):
-        self.new_user.save_User()
-        anothernew_user = User("mary", "Doe", "JohnDoe", "2222")
-        anothernew_user.save_User()
+    # def test_search_user(self):
+    #     self.new_user.save_User()
+    #     anothernew_user = User("mary", "Doe", "JohnDoe", "2222")
+    #     anothernew_user.save_User()
         
-        after_search = User.search_by_password("2222")
-        self.assertEqual(anothernew_user.firstname, anothernew_user.firstname)
+    #     after_search = User.search_by_password("2222")
+    #     self.assertEqual(anothernew_user.firstname, anothernew_user.firstname)
+    
+    #display our users
+    def test_display_allour_users(self):
+        '''
+        we get the users saved in our list
+        '''
+
+        self.assertEqual(User.display_users(),User.user_list)
+
         
         
 if __name__ == '__main__':

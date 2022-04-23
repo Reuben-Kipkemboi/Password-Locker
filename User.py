@@ -10,7 +10,7 @@ class User:
         self.firstname = firstname
         self.lastname = lastname
         self.username = username
-        self.password = passcode
+        self.passcode = passcode
     #saving new user
     def save_User(self):
 
@@ -25,6 +25,18 @@ class User:
         removing user form the list
         """
         User.user_list.remove(self)
+        
+        
+    #display users
+    @classmethod
+    def display_users(userlist):
+        '''
+        see our users in our userlist by returning the user list
+        '''
+        return userlist.user_list
+
+        
+    #searching for a user using the unique password     
         
         
         
