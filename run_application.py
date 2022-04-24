@@ -43,10 +43,10 @@ def search_credentials(accountname):
 def check_existing_credentials(accountname):
     return Credentials.credentials_exists()
 
-def display_Credentials():
+def display_credentials():
     return Credentials.display_credentials()
 
-#Main running appplication &&&&&&&&&***************_____
+#Main running appplication &&&&&&&&&*********************
 def main():
         print("Hello \U0001F60D, Welcome to Password_Locker\U0001F512!!! No need to master your passcodes.")
         print("**"*35)
@@ -86,7 +86,7 @@ def main():
                     user_selection = input()
                     print('\n')
                     if user_selection == "C":
-                        print("Create your various accounts e.g socila media")
+                        print("Create your various accounts e.g social media")
                         print("*-"*40)
                         print("Provide Account name")
                         accountname = input()
@@ -107,13 +107,16 @@ def main():
                         save_Credentials(create_account(accountname, accountusername, accountpasscode))
                         print("\n")
                         print(f"Your account name -> {accountname} \n Account User Name ->  {accountusername} \n Account Passcode ->  {accountpasscode} ")
-                        
-                        
-                            
-                        
-                        
-                                          
-                    
+                    elif user_selection == "V":
+                        if  display_credentials():
+                            print("Your Accounts and credentials are as follows:")
+                            print("*-"*20)
+                            for Credentials in display_credentials(accountname):
+                                print(f"Account:{accountname} \nPassword/Passcode: {accountpasscode}\n")
+                            else:
+                                print("Invalid credentials")    
+                        else:
+                            print('please Try Again')                    
 if __name__ == "__main__":
     main()
 

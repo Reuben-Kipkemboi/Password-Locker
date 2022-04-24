@@ -41,11 +41,12 @@ A user can:
 - View my various account credentials and their passwords in the application.
 - Delete a credentials account that I no longer need in the application.
 
-<hr>
 
 [Go Back to the top](#password-locker)
 
 ## Behaviour Driven Development
+
+
 
 
 [Go Back to the top](#password-locker)
@@ -75,6 +76,7 @@ A user can:
     `
         $ chmod +x run_application.py
     `
+
     `
         $ ./run_application.py
     `
@@ -93,7 +95,6 @@ A user can:
 
 [Go Back to the top](#password-locker)
 
-<hr>
 
 ## Technologies Used
 

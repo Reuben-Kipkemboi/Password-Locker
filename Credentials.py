@@ -42,7 +42,7 @@ class Credentials:
     @classmethod
     def display_credentials(cls):
         '''
-        see our users in our userlist by returning the user list
+        see our users in our userlist by returning the accounts list
         '''
         return cls.accounts_list
 
