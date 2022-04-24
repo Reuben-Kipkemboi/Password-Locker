@@ -55,7 +55,7 @@ def main():
     #User selection options
         while True: 
             print("Lets create an account or Login to proceed. Use IN to login or CA to Create Account")
-            print("lets proceed use IN or CA")
+            # print("lets proceed use IN or CA")
             user_input =input()
             if user_input =="CA":
                 print("Proceed to create your password Locker Account")
@@ -111,12 +111,22 @@ def main():
                         if  display_credentials():
                             print("Your Accounts and credentials are as follows:")
                             print("*-"*20)
-                            for Credentials in display_credentials(accountname):
+                            for credentials in display_credentials(accountname):
                                 print(f"Account:{accountname} \nPassword/Passcode: {accountpasscode}\n")
                             else:
-                                print("Invalid credentials")    
+                                print("Seems you have no credentials")    
                         else:
-                            print('please Try Again')                    
+                            print('please Try Again and create Account with credentials')     
+                    else:
+                        print("Try again kindly")
+                else:
+                    print("Check User again")
+            elif user_input == "ex":
+                print("don't master them anymore, Tell a friend")
+                break
+            else:
+                print("make use of shortcodes")
+                               
 if __name__ == "__main__":
     main()
 

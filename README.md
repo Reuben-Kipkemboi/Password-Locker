@@ -46,7 +46,12 @@ A user can:
 
 ## Behaviour Driven Development
 
-
+ Behaviour| Description |
+| ----------- | ----------- |
+| Creation of user Accounts | User creates accounts and uses account yo login using `CA` user input |
+| Save User and account credentials | User details saved  |
+| Display credentials | Display possible with the `v` code  |
+| Delete details | Unwanted details removed or deleted |
 
 
 [Go Back to the top](#password-locker)
