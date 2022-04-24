@@ -2,7 +2,7 @@ class Credentials:
     """
     initializes a new credentials class
     """
-    credentials_list=[] #our list where we shall store our users
+    accounts_list=[] #our list where we shall store our account details
     def __init__(self, accountname, accountusername, accountpasscode):
         """
         the method here for defining properties of the object

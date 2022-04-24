@@ -11,10 +11,10 @@ class TestUser(unittest.TestCase):
         #creating our new user object
         self.new_user = User("Reuby","Doe","DoeReuby","0000") 
     def tearDown(self):
-            '''
-            tearDown runs after every test case is complete.
-            '''
-            User.user_list = []
+        '''
+        tearDown runs after every test case is complete.
+        '''
+        User.user_list = []
 
     def test_init(self):
         self.assertEqual(self.new_user.firstname,"Reuby")
