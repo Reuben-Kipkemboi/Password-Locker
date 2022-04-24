@@ -2,6 +2,7 @@
 #on top is shebang
 
 from User import User
+from Credentials import Credentials
 
 def create_user(firstname, lastname, username, passcode):
     new_user =User(firstname, lastname, username, passcode)
@@ -19,7 +20,7 @@ def display_users():
     return User.display_users()
 
 def main():
-    print("Hello \U0001F60D , Welcome to Password_Locker! No need to master your passcodes")
+    print("Hello \U0001F60D , Welcome to Password_Locker \U0001F512 ! No need to master your passcodes")
     print("\n")
     print("What would you like to do today?")
     
