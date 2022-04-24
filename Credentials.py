@@ -20,4 +20,31 @@ class Credentials:
         removing credentails from accounts_list
         """
         Credentials.accounts_list.remove(self)
+        
+    #*******searching for a account using account name e.g instagram***************************** 
+       
+    @classmethod
+    def find_by_accountname(cls, accountname): #cls takes the whole class
+        for Credentials in cls.accounts_list:
+            if Credentials.accountname == accountname:
+                return Credentials
+            
+    #*************************check to see if the account  really exists*******************
+    
+    @classmethod
+    def credentials_exists(cls,accountname):
+        for Credentials in cls.accounts_list:
+            if Credentials.accountname == accountname:
+                return True
+        return False
+    
+    #***************************display  account & credentials*************************************************
+    @classmethod
+    def display_credentials(cls):
+        '''
+        see our users in our userlist by returning the user list
+        '''
+        return cls.accounts_list
+
+    
     

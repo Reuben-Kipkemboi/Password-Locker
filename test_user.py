@@ -51,7 +51,6 @@ class TestUser(unittest.TestCase):
         '''
         check existence of user.
         '''
-
         self.new_user.save_User()
         anothernew_user = User("Mary", "Doe", "MaryDoe", "2222")
         anothernew_user.save_User()
