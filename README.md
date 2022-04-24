@@ -43,7 +43,7 @@ A user can:
 
 <hr>
 
-[Go Back to the top](#pizza-bellino)
+[Go Back to the top](#password-locker)
 
 ## Behaviour Driven Development
 
@@ -57,17 +57,16 @@ A user can:
 - python3.8
 - pip
 - pyperclip
-- xclip
 
 ### Cloning
 
 - In your terminal:
 
  ```
-    {
+{
         $ git clone https://github.com/Reuben-Kipkemboi/Password-Locker
-        $ cd Password-Locker
-    }
+        $ cd Password
+}
 ```
 
 ## Running the Application
@@ -75,6 +74,8 @@ A user can:
 - To run the application, in your terminal:
     `
         $ chmod +x run_application.py
+    `
+    `
         $ ./run_application.py
     `
 
@@ -84,6 +85,8 @@ A user can:
 - To run the tests for the class file:
 `
         $ python3.8 test_Credentials.py
+`
+`
         $ python3.8 test_User.py
 `
 
@@ -91,6 +94,7 @@ A user can:
 [Go Back to the top](#password-locker)
 
 <hr>
+
 ## Technologies Used
 
 - Python
