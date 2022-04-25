@@ -32,24 +32,45 @@ def create_account(accountname, accountusername, accountpasscode):
     return new_account
 
 def save_Credentials(Credentials):
+    """
+    saving account credentials
+    """
     Credentials.save_Credentials()
     
 def delete_Credentials(Credentials):
+    """
+    Delete credentials
+    """
     Credentials.delete_Credentials()
     
 def search_credentials(accountname):
-    return Credentials.find_by_accountname()
+    """
+    search credentials
+    """
+    return Credentials.find_by_accountname(accountname)
 
 def check_existing_credentials(accountname):
-    return Credentials.credentials_exists()
+    """
+    Check existing credentials
+    """
+    return Credentials.credentials_exists(accountname)
 
 def display_credentials():
+    """
+    displaying our account credentials
+    """
     return Credentials.display_credentials()
 
-#Main running appplication &&&&&&&&&*********************
+#Main running appplication *********************
 def main():
         print("Hello \U0001F60D, Welcome to Password_Locker\U0001F512!!! No need to master your passcodes.")
-        print("**"*35)
+        print("               ____                          _                    _           ")
+        print("              |  _ \                        | |                  | |         ")
+        print("              | |_) )  ____  ___   ___      | |      _____   _   | |      ____    _ _   ")
+        print("              |  __/  / _  |/ __  / __      | |     /  _  \ /    | |     / __ \  | '_|    ")
+        print("              | |    / (_| |\__ \ \__ \     | |___ (  (_)  (  (  | |/ / | (___/   | |    ")
+        print("              |_|    \_____| ___/  ___/     |_____) \_____/ \__  |_|\ \  \____    |_| ....    ")
+        print("**"*60)
              
     #User selection options
         while True: 
@@ -72,8 +93,9 @@ def main():
                 print("Your password-locker account created successfully...please proceed to login")
                 print("--" *20)
                 print(f"FullNames -> {firstname}{lastname} \n User Name -> {username} \nPasscode/password -> {passcode}")
-                print("\n")
-                
+                print("|     ___   ____       _   ")
+                print("|    |/\ | |  __  |  | \  |")
+                print("|___ |\/_| |___|  |  |  \_|")
                 print("Please provide your user Name")
                 usernameaccount = input()
                 print("Provide your passcode or Password")
@@ -81,16 +103,13 @@ def main():
                 if usernameaccount == username and passcode ==passcode:
                     print("Successfully Logged In..welcome.......")
                     print("--"*20)
-                    print("\n")
-                elif username != username or passcode != passcode: 
-                    print("Use correct credentials")
                 pass
                 while True:
                     print("Use the following initials to create, view and delete accounts")
                     print("CRE to create new credential account")
                     print("SAVE to save existing credentials account details")
-                    print("VIEW to create new credential account")
-                    print("DEL to create new credential account")
+                    print("VIEW to view credential account")
+                    print("DEL to delete credential account")
                     print("EXIT to exit password locker")
                     
                     user_input = input()
@@ -139,20 +158,19 @@ def main():
                         save_Credentials(create_account(accountname, accountusername, accountpasscode))
                         print("\n")
                         print(f"hello {accountusername} your credentails saved successfully")
-                        print("\n")
-                        
+                        print("\n")  
                     elif user_input == "VIEW":
                         if display_credentials():
                             print("hello, your credentials are as follows:...")
-                            print("\n")  
-                            for credentials in display_credentials():
-                                print(f"Your{accountname} is as follows:")
-                                print("*-"*10)
-                                print(f"Account Username ->{accountusername}")
-                                print("*-"*10)
-                                print(f"Account Passcode ->{accountpasscode}")
-                                print("\n")
-                                
+                            for Credentails in display_credentials():
+                                print("-----"*20)
+                                print(f"Account Type -> {accountname}")
+                                print(f"Your{accountname} details are as follows:")
+                                print("--"*20)
+                                print(f"Account Username -> {accountusername}")
+                                print("--"*20)
+                                print(f"Account Passcode -> {accountpasscode}")
+                                print("\n")                                
                         else:
                             print("\n")
                             print("Seems we have no such credentials")
@@ -160,12 +178,12 @@ def main():
                     elif user_input == "DEL":
                         print("Provide the account Name to be deleted")
                         accountname = input()
-                        if check_existing_credentials(accountname):
+                        if search_credentials(accountname):
                             accountname = search_credentials(accountname)
-                            delete_Credentials(accountname)
+                            delete_Credentials()
                             print("Account Credentials deleted Successfully")
                         else:
-                            print("Such credentials do not exist")
+                            print("Such Account credentials do not exist")
                     
                     elif user_input == "EXIT":
                         print("See you next time..Good day fella")
