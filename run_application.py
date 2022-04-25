@@ -53,7 +53,7 @@ def main():
              
     #User selection options
         while True: 
-            print("Lets create an account or Login to proceed. Use IN to login or CA to Create Account")
+            print("Lets create an account or Login to proceed or exit. Use IN to login, CA to Create Account or EXIT to exit application ")
             # print("lets proceed use IN or CA")
             user_input =input()
             if user_input =="CA":
@@ -75,13 +75,15 @@ def main():
                 print("\n")
                 
                 print("Please provide your user Name")
-                username = input()
+                usernameaccount = input()
                 print("Provide your passcode or Password")
                 passcode = input()
-                if username == username and passcode ==passcode:
+                if usernameaccount == username and passcode ==passcode:
                     print("Successfully Logged In..welcome.......")
-                    print("*_#"*20)
-                print("\n")
+                    print("--"*20)
+                    print("\n")
+                elif username != username or passcode != passcode: 
+                    print("Use correct credentials")
                 pass
                 while True:
                     print("Use the following initials to create, view and delete accounts")
@@ -121,7 +123,7 @@ def main():
                         print(f"Your account name -> {accountname} \n Account User Name ->  {accountusername} \n Account Passcode ->  {accountpasscode} ")
                         print("*-"*30)
                         print("\n")
-                    elif user_input == "SAV":
+                    elif user_input == "SAVE":
                         print("Lets save your credentials...")
                         print("*-"*30)
                         
@@ -141,10 +143,9 @@ def main():
                         
                     elif user_input == "VIEW":
                         if display_credentials():
-                            print("hello, your credentials list is as follows:...")
-                            print("\n")
-                            
-                            for Credential in display_credentials():
+                            print("hello, your credentials are as follows:...")
+                            print("\n")  
+                            for credentials in display_credentials():
                                 print(f"Your{accountname} is as follows:")
                                 print("*-"*10)
                                 print(f"Account Username ->{accountusername}")
@@ -160,108 +161,31 @@ def main():
                         print("Provide the account Name to be deleted")
                         accountname = input()
                         if check_existing_credentials(accountname):
-                            account_delete = search_credentials(accountname)
+                            accountname = search_credentials(accountname)
                             delete_Credentials(accountname)
                             print("Account Credentials deleted Successfully")
                         else:
                             print("Such credentials do not exist")
                     
                     elif user_input == "EXIT":
-                        print("See you next time..Good day")
+                        print("See you next time..Good day fella")
                         print("---"*20)
-                        print("\n")
-                    else:
-                        print("do a quick check")
-                        print("\n")
+                        print("\n")    
+                        break   
                 # else:
                 #     print("Wrong credentials")
-            elif user_input == "IN":
-                print("proceed to login")
-                
-                print("Provide Your Username,....")
-                username= input()
-                
-                print("Passcode....")
-                passcode = input()
-                if username == username and passcode ==passcode:
-                    print("Successfully Logged In..welcome.......")
-                    print("*--"*20)
-                print("\n")
-                  
-                
-                            
-                        
-                            
-                    
-                    
-                                
-                                
-                                
-                                
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                                    
-                
             # elif user_input == "IN":
-            #     print("Please provide your user Name")
-            #     username = input()
-            #     print("Provide your passcode or Password")
+            #     print("proceed to login")
+                
+            #     print("Provide Your Username,....")
+            #     username= input()
+                
+            #     print("Passcode....")
             #     passcode = input()
-            #     if check_existing_user(passcode):
-            #         print("\n")
-            #         print("Successfully logged in ...Please go ahead and create(C)and view (V)your different account credentials")
-            #         print("*-"*40)
-            #         print('C or V')
-            #         user_selection = input()
-            #         print('\n')
-            #         if user_selection == "C":
-            #             print("Create your various accounts e.g social media")
-            #             print("*-"*40)
-            #             print("Provide Account name")
-            #             accountname = input()
-            #             print("*-"*40)
-            #             accountusername = username
-            #             print("*-"*40)
-            #             print("Provide your account security passcode(CP) or Use Generated Password(GP)")
-            #             generatedpassword = input()
-            #             if generatedpassword == "GP":
-            #                 passwordcharacters = string.ascii_letters +string.digits
-            #                 accountpasscode = "".join(user_selection(passwordcharacters )for i in range(6,16))
-            #                 print(f"Passcode -> {accountpasscode}")
-            #             elif generatedpassword == "CP":
-            #                 print("Provide your security key or passcode")
-            #                 accountpasscode = input()
-            #             else:
-            #                 print("provide a better selection")
-            #             save_Credentials(create_account(accountname, accountusername, accountpasscode))
-            #             print("\n")
-            #             print(f"Your account name -> {accountname} \n Account User Name ->  {accountusername} \n Account Passcode ->  {accountpasscode} ")
-            #         elif user_selection == "V":
-            #             if  display_credentials():
-            #                 print("Your Accounts and credentials are as follows:")
-            #                 print("*-"*20)
-            #                 for credentials in display_credentials(accountname):
-            #                     print(f"Account:{accountname} \nPassword/Passcode: {accountpasscode}\n")
-            #                 else:
-            #                     print("Seems you have no credentials")    
-            #             else:
-            #                 print('please Try Again and create Account with credentials')     
-            #         else:
-            #             print("Try again kindly")
-            #     else:
-            #         print("Check User again")
-            # elif user_input == "ex":
-            #     print("don't master them anymore, Tell a friend")
-            #     break
-            # else:
-            #     print("make use of shortcodes")
-                               
+            #     if username == username and passcode ==passcode:
+            #         print("Successfully Logged In..welcome.......")
+            #         print("*--"*20)
+            #     print("\n")    
 if __name__ == "__main__":
     main()
 
