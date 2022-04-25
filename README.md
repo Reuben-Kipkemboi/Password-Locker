@@ -69,10 +69,10 @@ A user can:
 - In your terminal:
 
  ```
-{
+
         $ git clone https://github.com/Reuben-Kipkemboi/Password-Locker
         $ cd Password
-}
+        
 ```
 
 ## Running the Application
