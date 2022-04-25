@@ -180,8 +180,9 @@ def main():
                         accountname = input()
                         if search_credentials(accountname):
                             accountname = search_credentials(accountname)
-                            delete_Credentials()
-                            print("Account Credentials deleted Successfully")
+                            accountname.delete_Credentials()
+                            print("Hello your Account Credentials deleted Successfully")
+                            print("--"*50)
                         else:
                             print("Such Account credentials do not exist")
                     
@@ -190,20 +191,20 @@ def main():
                         print("---"*20)
                         print("\n")    
                         break   
-                # else:
-                #     print("Wrong credentials")
-            # elif user_input == "IN":
-            #     print("proceed to login")
+                else:
+                    print("Wrong credentials")
+            elif user_input == "IN":
+                print("proceed to login")
                 
-            #     print("Provide Your Username,....")
-            #     username= input()
+                print("Provide Your Username,....")
+                username= input()
                 
-            #     print("Passcode....")
-            #     passcode = input()
-            #     if username == username and passcode ==passcode:
-            #         print("Successfully Logged In..welcome.......")
-            #         print("*--"*20)
-            #     print("\n")    
+                print("Passcode....")
+                passcode = input()
+                if username == username and passcode ==passcode:
+                    print("Successfully Logged In..welcome.......")
+                    print("*--"*20)
+                print("\n")    
 if __name__ == "__main__":
     main()
 
