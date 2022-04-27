@@ -66,11 +66,7 @@ class TestUser(unittest.TestCase):
         we get the users saved in our user list
         '''
         self.assertEqual(User.display_users(),User.user_list)
-        
-    
-
-        
-        
+                     
 if __name__ == '__main__':
     unittest.main()
         

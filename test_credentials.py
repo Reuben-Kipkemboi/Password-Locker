@@ -65,7 +65,7 @@ class TestCredentials(unittest.TestCase):
         
     #6.********************** display all accounts and credentials**********************************
     
-    def test_display_all_our_users(self):
+    def test_display_all_our_credentials(self):
         '''
         we display all the accounts and credentials saved in our list
         '''

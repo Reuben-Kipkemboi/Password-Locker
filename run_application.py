@@ -63,19 +63,18 @@ def display_credentials():
 
 #Main running appplication *********************
 def main():
-        print("Hello \U0001F60D, Welcome to Password_Locker\U0001F512!!! No need to master your passcodes.")
+        print("Welcome to Password_Locker\U0001F512!!! No need to master your passcodes.")
         print("               ____                          _                    _           ")
         print("              |  _ \                        | |                  | |         ")
-        print("              | |_) )  ____  ___   ___      | |      _____   _   | |      ____    _ _   ")
-        print("              |  __/  / _  |/ __  / __      | |     /  _  \ /    | |     / __ \  | '_|    ")
+        print("              | |_) )  ____  ___   ___      | |      _____   _   | |      ____     _ _   ")
+        print("              |  __/  / _  |/ __  / __      | |     /  _  \ /    | |     / __ \   | '_|    ")
         print("              | |    / (_| |\__ \ \__ \     | |___ (  (_)  (  (  | |/ / | (___/   | |    ")
         print("              |_|    \_____| ___/  ___/     |_____) \_____/ \__  |_|\ \  \____    |_| ....    ")
         print("**"*60)
              
     #User selection options
         while True: 
-            print("Lets create an account or Login to proceed or exit. Use IN to login, CA to Create Account or EXIT to exit application ")
-            # print("lets proceed use IN or CA")
+            print("Lets create an account or Exit.CA to Create Account or EXIT to exit password Locker ")
             user_input =input()
             if user_input =="CA":
                 print("Proceed to create your password Locker Account")
@@ -93,9 +92,8 @@ def main():
                 print("Your password-locker account created successfully...please proceed to login")
                 print("--" *20)
                 print(f"FullNames -> {firstname}{lastname} \n User Name -> {username} \nPasscode/password -> {passcode}")
-                print("|     ___   ____       _   ")
-                print("|    |/\ | |  __  |  | \  |")
-                print("|___ |\/_| |___|  |  |  \_|")
+                print("\n")
+                print(" _______"*5 + "Lets login" + " _______"*5 )     
                 print("Please provide your user Name")
                 usernameaccount = input()
                 print("Provide your passcode or Password")
@@ -193,18 +191,9 @@ def main():
                         break   
                 else:
                     print("Wrong credentials")
-            elif user_input == "IN":
-                print("proceed to login")
-                
-                print("Provide Your Username,....")
-                username= input()
-                
-                print("Passcode....")
-                passcode = input()
-                if username == username and passcode ==passcode:
-                    print("Successfully Logged In..welcome.......")
-                    print("*--"*20)
-                print("\n")    
+                    
+            else:
+                print("create and account")
 if __name__ == "__main__":
     main()
 
