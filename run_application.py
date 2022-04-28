@@ -107,6 +107,7 @@ def main():
                     print("CRE to create new credential account")
                     print("SAVE to save existing credentials account details")
                     print("VIEW to view credential account")
+                    print("FIND to find user credentails")
                     print("DEL to delete credential account")
                     print("EXIT to exit password locker")
                     
@@ -183,7 +184,18 @@ def main():
                             print("--"*50)
                         else:
                             print("Such Account credentials do not exist")
-                    
+                            
+                    elif user_input == 'FIND':
+                        print("Enter the account name you want to search for")
+                        searchaccountname = input()
+                        if check_existing_credentials(searchaccountname):
+                            search_credentialsname = search_credentials(searchaccountname)
+                            print(f"Account Type Name -> {search_credentialsname.accountname} \n Account UserName -> {search_credentialsname.accountusername} \n Account passcode -> {search_credentialsname.accountpasscode}")
+                            print('-'*20)
+                           
+                        else:
+                            print("No such account and credentials")            
+                                    
                     elif user_input == "EXIT":
                         print("See you next time..Good day fella")
                         print("---"*20)
